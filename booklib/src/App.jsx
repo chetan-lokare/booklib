@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from './Navbar'
 import Manage from './pages/Manage';
 import Home from './pages/Home';
+import Account from './pages/Account';
 import { Route, Routes } from 'react-router-dom'
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/manage' element={<Manage />} />
+          <Route path='/account' element={<Account />} />
         </Routes>
       </div>
     </>

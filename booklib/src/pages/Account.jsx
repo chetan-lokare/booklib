@@ -1,8 +1,8 @@
-export default function Manage() {
+export default function Account() {
     return (
         <div className="pageID">
             <div className="pgidline"></div>
-            <p className="pgidname">Manage</p>
+            <p className="pgidname">Account</p>
         </div>
     )
 }
