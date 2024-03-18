@@ -1,7 +1,9 @@
 export default function Home() {
     return (
         <div className="pageID">
-            <p>Home</p>
+            <div className="pgidline"></div>
+            <p className="pgidname">Home</p>
+            <p className="pgiddecor">***</p>
         </div>
     )
 }

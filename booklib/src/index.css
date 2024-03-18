@@ -54,3 +54,28 @@ body {
   align-items: center;
   font-size: 30px;
 }
+
+.pgidline {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+}
+
+.pgidname {
+  position: absolute;
+  background-color: white;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pgiddecor {
+  position: absolute;
+  margin-top: 95px;
+  width: 10%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
