@@ -3,25 +3,17 @@ import './App.css'
 import Navbar from './Navbar'
 import Manage from './pages/Manage';
 import Home from './pages/Home';
+import { Route, Routes } from 'react-router-dom'
 
 function App() {
-  let Component;
-  switch (window.location.pathname) {
-    case "/":
-      Component = Home;
-      break;
-    case "/manage":
-      Component = Manage;
-      break;  
-    
-    default:
-      break;
-  }
   return (
     <>
       <Navbar />
       <div className="container">
-        <Component />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/manage' element={<Manage />} />
+        </Routes>
       </div>
     </>
   )

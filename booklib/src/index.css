@@ -46,3 +46,11 @@ body {
 .nav li:hover {
 
 }
+
+.pageID {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
