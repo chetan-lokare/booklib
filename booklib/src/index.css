@@ -6,7 +6,7 @@
 }
 
 body {
-  margin: 0;
+  margin: .5rem;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 100;
   background-color: var(--bg);
@@ -35,24 +35,28 @@ body {
 }
 
 .nav a {
-  color: inherit;
   text-decoration: none;
   height: 100%;
   display: flex;
   align-items: center;
   padding: .25rem;
+  color: inherit;
+  font-size: 20px;
 }
 
-.site-title {
+.nav .site-title {
   font-size: 100px;
+  background-color: black;
+  color: white;
 }
 
 .nav li.active {
-  text-decoration: underline;
+  color: #725AC1;
 }
 
 .nav li:hover {
-
+  background-color: black;
+  color: white;
 }
 
 .pageID {
@@ -61,6 +65,7 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 30px;
+  margin-bottom: 50px;
 }
 
 .pgidline {
@@ -72,7 +77,7 @@ body {
 .pgidname {
   position: absolute;
   background-color: var(--bg);
-  width: 10%;
+  width: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,3 +92,14 @@ body {
   justify-content: center;
   align-items: center;
 } */
+
+.details {
+  font-size: 50px;
+  width: fit-content;
+  margin: 0;
+}
+
+.detemail {
+  font-size: 18px;
+  text-indent: 4px;
+}
