@@ -11,7 +11,9 @@ import Register from './pages/Register';
 function App() {
   return (
     <>
-      <Navbar />
+      {
+        location.pathname !== "/account/login" && location.pathname !== "/account/register" && <Navbar />
+      }
       <div className="container">
         <Routes>
           <Route path='/' element={<Home />} />

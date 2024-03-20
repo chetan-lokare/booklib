@@ -15,10 +15,12 @@ export default function Account() {
 
     const logout = async () => {
         await signOut(auth);
+        window.location.reload();
     }
 
     if (!user) {
         navigate('/account/register')
+        window.location.reload();
     } else if (user) {
         Component = (
             <>

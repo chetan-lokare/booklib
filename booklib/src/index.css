@@ -103,3 +103,231 @@ body {
   font-size: 18px;
   text-indent: 4px;
 }
+
+.signout {
+  width: 80px;
+  height: 30px;
+  background-color: var(--bg);
+  color: black;
+  border: 1px solid black;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  cursor: pointer;
+}
+
+.signout:hover {
+  background-color: black;
+  color: white;
+}
+
+.form {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-size: 15vw;
+  width: fit-content;
+  background-color: black;
+  color: white;
+  margin-bottom: 25px;
+}
+
+.form input {
+  text-indent: 5px;
+}
+
+.loginemail {
+  width: 40vw;
+  height: 60px;
+  border: 0;
+  border-bottom: 1px solid black;
+  margin-bottom: 15px;
+}
+
+.loginpass {
+  width: 40vw;
+  height: 60px;
+  border: 0;
+  border-bottom: 1px solid black;
+  margin-bottom: 15px;
+}
+
+.signin {
+  width: 80px;
+  height: 30px;
+  background-color: var(--bg);
+  color: black;
+  border: 1px solid black;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.signin:hover {
+  background-color: black;
+  color: white;
+}
+
+.rerg {
+  color: black;
+}
+
+.registeremail {
+  width: 40vw;
+  height: 60px;
+  border: 0;
+  border-bottom: 1px solid black;
+  margin-bottom: 15px;
+}
+
+.registerpass {
+  width: 40vw;
+  height: 60px;
+  border: 0;
+  border-bottom: 1px solid black;
+  margin-bottom: 15px;
+}
+
+.register {
+  width: 80px;
+  height: 30px;
+  background-color: var(--bg);
+  color: black;
+  border: 1px solid black;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.register:hover {
+  background-color: black;
+  color: white;
+}
+
+.relg {
+  color: black;
+}
+
+.rack {
+  overflow: scroll;
+}
+
+.shelf {
+  width: 90vw;
+}
+
+.shelfname {
+  font-size: 60px;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.shelfname .actshlfname {
+  margin-right: 30px;
+}
+
+.books {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  overflow: scroll;
+}
+
+.books .book {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-right: 80px;
+  font-size: 20px;
+}
+
+.editshelf {
+  width: 80px;
+  height: 30px;
+  background-color: var(--bg);
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.editshelf:hover {
+  background-color: black;
+  color: white;
+}
+
+.delshelf {
+  width: 80px;
+  height: 30px;
+  background-color: var(--bg);
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.delshelf:hover {
+  background-color: black;
+  color: white;
+}
+
+.shelfaddtools {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.addshelf {
+  width: 15vw;
+  height: 60px;
+  border: 0;
+  border-bottom: 1px solid black;
+  margin-bottom: 15px;
+  margin-right: 30px;
+}
+
+.addshbtn {
+  width: 80px;
+  height: 30px;
+  background-color: var(--bg);
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.addshbtn:hover {
+  background-color: black;
+  color: white;
+}
+
+.removebook {
+  width: 30px;
+  height: 30px;
+  background-color: var(--bg);
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+  position: relative;
+  left: 20px;
+}
+
+.removebook:hover {
+  background-color: black;
+  color: white;
+}
