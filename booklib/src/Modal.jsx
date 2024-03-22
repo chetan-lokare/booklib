@@ -1,4 +1,6 @@
+import { collection, doc, updateDoc } from "firebase/firestore";
 import { useState } from "react";
+import { db } from "./firebase";
 
 const Modal = ({ open, shelf, onClose }) => {
   if (!open) return null;
@@ -8,7 +10,9 @@ const Modal = ({ open, shelf, onClose }) => {
 
   const editShelfName = async () => {
     const documentRef = doc(collection(db, shelfName), shelf.id);
-    await updateField(documentRef, 'name', newShelfName);
+    await updateDoc(documentRef, {
+      name: newShelfName
+    });
   }
 
 
