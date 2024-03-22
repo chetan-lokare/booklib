@@ -1,30 +1,40 @@
-import { useState } from 'react'
-import './App.css'
-import Navbar from './Navbar'
+import { useParams } from 'react-router-dom';
+import { useState } from 'react';
+import './App.css';
+import Navbar from './Navbar';
 import Manage from './pages/Manage';
 import Home from './pages/Home';
 import Account from './pages/Account';
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom';
 import Login from './pages/Login';
 import Register from './pages/Register';
 
-function App() {
+export default function App() {
   return (
     <>
-      {
-        location.pathname !== "/account/login" && location.pathname !== "/account/register" && <Navbar />
-      }
+      {location.pathname !== "/account/login" && location.pathname !== "/account/register" && <Navbar />}
       <div className="container">
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/manage' element={<Manage />} />
-          <Route path='/account' element={<Account />} />
-          <Route path='/account/login' element={<Login />} />
-          <Route path='/account/register' element={<Register />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/manage" element={<Manage />} />
+          <Route path="/account" element={<Account />} />
+          <Route path="/account/:subpageId" element={<AccountSubpages />} />
         </Routes>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+function AccountSubpages() {
+  const { subpageId } = useParams();
+
+  return (
+    <div>
+      {subpageId === 'login' && <Login />}
+      {subpageId === 'register' && <Register />}
+      {/* Add cases for other 'account' subpages as needed */}
+      {/* For example: */}
+      {/* {subpageId === 'settings' && <Settings />} */}
+    </div>
+  );
+}

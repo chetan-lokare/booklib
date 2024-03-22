@@ -30,11 +30,11 @@ export default function Home() {
 
             <div className="rack">
                 {rack.map((shelf) => (
-                    <div key={shelf} className="shelf">
-                        <p key={shelf.name} className="shelfname">{shelf.name}</p>
+                    <div className="shelf">
+                        <p className="shelfname">{shelf.name}</p>
                         <div className="books" key={shelf.books}>
                             {shelf.books.map((book) => (
-                                <p key={book} className="book">{book}</p>
+                                <p className="book">{book}</p>
                             ))}
                         </div>
                     </div>

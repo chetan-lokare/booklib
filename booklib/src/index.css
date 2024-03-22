@@ -1,3 +1,5 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap'); */
+
 :root {
   --bg: white;
   --pri: 0;
@@ -5,11 +7,46 @@
   --ter: 0;
 }
 
+.logo {
+  font-size: 15vw;
+  width: fit-content;
+  background-color: black;
+  color: white;
+  margin-bottom: 25px;
+}
+
+.logo-xs {
+  font-size: 1vw;
+  width: fit-content;
+  background-color: black;
+  color: white;
+  margin-bottom: 25px;
+}
+
 body {
   margin: .5rem;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Ubuntu';
   font-weight: 100;
   background-color: var(--bg);
+}
+
+button {
+  background-color: var(--bg);
+  color: black;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+input {
+  border: 0;
+  border-bottom: 1px solid black;
+  margin-bottom: 15px;
+  text-indent: 2px;
 }
 
 .container {
@@ -107,32 +144,15 @@ body {
 .signout {
   width: 80px;
   height: 30px;
-  background-color: var(--bg);
-  color: black;
-  border: 1px solid black;
   position: absolute;
   bottom: 1rem;
   left: 1rem;
-  cursor: pointer;
-}
-
-.signout:hover {
-  background-color: black;
-  color: white;
 }
 
 .form {
   height: fit-content;
   display: flex;
   flex-direction: column;
-}
-
-.logo {
-  font-size: 15vw;
-  width: fit-content;
-  background-color: black;
-  color: white;
-  margin-bottom: 25px;
 }
 
 .form input {
@@ -142,32 +162,18 @@ body {
 .loginemail {
   width: 40vw;
   height: 60px;
-  border: 0;
-  border-bottom: 1px solid black;
-  margin-bottom: 15px;
 }
 
 .loginpass {
   width: 40vw;
   height: 60px;
   border: 0;
-  border-bottom: 1px solid black;
-  margin-bottom: 15px;
 }
 
 .signin {
   width: 80px;
   height: 30px;
-  background-color: var(--bg);
-  color: black;
-  border: 1px solid black;
   margin-bottom: 15px;
-  cursor: pointer;
-}
-
-.signin:hover {
-  background-color: black;
-  color: white;
 }
 
 .rerg {
@@ -177,32 +183,17 @@ body {
 .registeremail {
   width: 40vw;
   height: 60px;
-  border: 0;
-  border-bottom: 1px solid black;
-  margin-bottom: 15px;
 }
 
 .registerpass {
   width: 40vw;
   height: 60px;
-  border: 0;
-  border-bottom: 1px solid black;
-  margin-bottom: 15px;
 }
 
 .register {
   width: 80px;
   height: 30px;
-  background-color: var(--bg);
-  color: black;
-  border: 1px solid black;
   margin-bottom: 15px;
-  cursor: pointer;
-}
-
-.register:hover {
-  background-color: black;
-  color: white;
 }
 
 .relg {
@@ -211,6 +202,7 @@ body {
 
 .rack {
   overflow: scroll;
+  z-index: -1;
 }
 
 .shelf {
@@ -246,39 +238,27 @@ body {
 .books .book {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  margin-right: 80px;
+  margin-right: 20px;
   font-size: 20px;
+}
+
+.removebook {
+  width: 30px;
+  height: 30px;
+  margin-right: 80px;
 }
 
 .editshelf {
   width: 80px;
   height: 30px;
-  background-color: var(--bg);
-  color: black;
-  border: 1px solid black;
-  cursor: pointer;
   margin-right: 10px;
-}
-
-.editshelf:hover {
-  background-color: black;
-  color: white;
 }
 
 .delshelf {
   width: 80px;
   height: 30px;
-  background-color: var(--bg);
-  color: black;
-  border: 1px solid black;
-  cursor: pointer;
-}
-
-.delshelf:hover {
-  background-color: black;
-  color: white;
 }
 
 .shelfaddtools {
@@ -291,43 +271,76 @@ body {
   position: fixed;
   bottom: 1rem;
   left: 1rem;
+  z-index: -1;
 }
 
 .addshelf {
   width: 15vw;
   height: 60px;
-  border: 0;
-  border-bottom: 1px solid black;
-  margin-bottom: 15px;
   margin-right: 30px;
 }
 
 .addshbtn {
   width: 80px;
   height: 30px;
-  background-color: var(--bg);
-  color: black;
-  border: 1px solid black;
-  cursor: pointer;
 }
 
-.addshbtn:hover {
-  background-color: black;
-  color: white;
+.overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
 }
 
-.removebook {
+.modal-container {
+  max-width: 70%;
+  width: 100%;
+  max-height: 75%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  position: relative;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.75);
+  padding-left: 1rem;
+}
+
+.modalClose {
   width: 30px;
   height: 30px;
-  background-color: var(--bg);
-  color: black;
-  border: 1px solid black;
-  cursor: pointer;
-  position: relative;
-  left: 20px;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
 }
 
-.removebook:hover {
-  background-color: black;
-  color: white;
+.edit-title {
+  font-size: 5vw;
+  margin-bottom: 20px;
+}
+
+.editname {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+}
+
+.editname input {
+  width: 300px;
+  height: 30px;
+  margin-left: 30px;
+}
+
+.editshelfbtn {
+  margin-left: 30px;
+  width: 80px;
+  height: 30px;
 }
